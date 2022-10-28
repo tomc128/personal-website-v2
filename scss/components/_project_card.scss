@@ -3,8 +3,9 @@
 
 .project-card {
     min-height: 30rem;
+    height: 1rem; // to make height: 100% work in .actions
 
-    background:  variables.$glass-gradient, variables.$container-background-two;
+    background: variables.$glass-gradient, variables.$container-background-two;
     border: 1px solid variables.$stroke;
     border-radius: variables.$border-radius;
 
@@ -13,24 +14,79 @@
     > .content {
         display: flex;
         height: 100%;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 3rem;
         padding: 3rem;
+        align-items: flex-start;
 
-        h2 {
-            color: variables.$text-title;
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .left {
+            flex: 1 1 0px;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+
+            h2 {
+                color: variables.$text-title;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .chips {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .actions {
+                display: flex;
+                margin-top: auto;
+            }
         }
 
-        .chips {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
+        .right {
+            position: relative;
+            flex: 1 1 0px;
+            border: 1px solid variables.$stroke;
+            border-radius: variables.$border-radius;
+            height: calc(100% + 6rem);
 
-        .actions {
-            display: flex;
-            flex-grow: 1;
+            box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: variables.$border-radius;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                opacity: 1;
+
+                border-radius: variables.$border-radius;
+                background: variables.$container-background-one;
+
+                transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+
+                border-radius: variables.$border-radius;
+                background: variables.$glass-gradient;
+            }
+        }
+    }
+
+    &:hover {
+        > .content .right::before {
+            opacity: 0;
         }
     }
 }
