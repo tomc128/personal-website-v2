@@ -1,0 +1,11 @@
+@use '../util/variables';
+
+.chip {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+
+    border: 1px solid variables.$stroke;
+    border-radius: variables.$border-radius;
+
+    color: variables.$text-emphasis;
+}

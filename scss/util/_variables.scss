@@ -1,24 +1,25 @@
 $background: #212126;
 $background-two: #202031;
 
-$background-temp-light: #4A4B69;
+$background-temp-light: #4a4b69;
 $background-temp-dark: #202031;
 
 $item-background: #2e2b3b;
 
-$text-title: #FFD0D0;
+$text-title: #ffd0d0;
 $text-nav: #c0a6a6;
 $text-subtitle: #948181;
-$text-body: #C7B4B4;
+$text-body: #988d8d;
+$text-emphasis: #c7b4b4;
 
-$glass-stop-one:rgba(255, 255, 255, 0.05);
-$glass-stop-two:rgba(255, 255, 255, 0);
+$glass-stop-one: rgba(255, 255, 255, 0.05);
+$glass-stop-two: rgba(255, 255, 255, 0);
 
-$glass-gradient: linear-gradient(165deg, $glass-stop-one  0%, $glass-stop-two 100%);
-$overlay-one: rgba(28, 28, 36, 0.75);
-$overlay-two: rgba(32, 32, 49, 0.75);
+$glass-gradient: linear-gradient(165deg, $glass-stop-one 0%, $glass-stop-two 100%);
+$container-background-one: rgba(28, 28, 36, 0.75);
+$container-background-two: rgba(32, 32, 49, 0.75);
 
-$stroke: rgba(255,255,255,0.15);
+$stroke: rgba(255, 255, 255, 0.15);
 
 $nav-height: 7.5rem;
 

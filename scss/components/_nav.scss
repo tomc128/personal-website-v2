@@ -7,7 +7,9 @@ nav {
     height: variables.$nav-height;
 
     border-bottom: 1px solid variables.$stroke;
-    background: variables.$glass-gradient, variables.$overlay-one;
+    background: variables.$glass-gradient, variables.$container-background-one;
+
+    z-index: 100;
 
     @include mixins.background-blur;
     

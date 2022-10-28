@@ -1,0 +1,11 @@
+@use '../util/variables';
+
+section {
+    > .content {
+        > h1 {
+            font-size: 2.5rem;
+            color: variables.$text-title;
+            margin-bottom: 1rem;
+        }
+    }
+}

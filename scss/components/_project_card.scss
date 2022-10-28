@@ -1,0 +1,36 @@
+@use '../util/variables';
+@use '../util/mixins';
+
+.project-card {
+    min-height: 30rem;
+
+    background:  variables.$glass-gradient, variables.$container-background-two;
+    border: 1px solid variables.$stroke;
+    border-radius: variables.$border-radius;
+
+    @include mixins.background-blur;
+
+    > .content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        padding: 3rem;
+
+        h2 {
+            color: variables.$text-title;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .chips {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .actions {
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+}

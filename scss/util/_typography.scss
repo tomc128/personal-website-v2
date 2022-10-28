@@ -1,5 +1,16 @@
+@use './variables';
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
 
-h1, h2, h3, h4, h5, h6, p, span, a {
+h1, h2, h3, h4, h5, h6, p, span, a, div {
     font-family: 'Figtree', 'Roboto', sans-serif;
+}
+
+body {
+    color: variables.$text-body;
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.5;
 }
