@@ -1,0 +1,14 @@
+@use '../util/variables';
+
+nav {
+    height: variables.$nav-height;
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid variables.$stroke;
+    background: variables.$overlay-gradient;
+
+    h2 {
+        color: variables.$text-title;
+    }
+}
