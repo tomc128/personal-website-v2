@@ -36,9 +36,13 @@
     &.glass {
     }
 
-    &.text {
+    &.outlined {
         color: variables.$primary;
         border: 1px solid variables.$stroke;
         border-radius: variables.$border-radius;
+    }
+
+    &.text {
+        color: variables.$primary;
     }
 }
