@@ -14,7 +14,8 @@ body {
     background-color: variables.$background;
 }
 
-section > .content {
+section > .content, nav > .content, footer > .content {
     max-width: 1800px;
     margin: 0 auto;
+    padding: 0 4rem;
 }

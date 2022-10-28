@@ -27,9 +27,29 @@
 
     <section id="hero">
         <div class="content">
-            <div class="main">
+            <div class="left">
                 <h1>Hey,<br>I'm Tom</h1>
                 <p>Software developer & computer science student</p>
+            </div>
+            <div class="right">
+                <svg viewBox="0 0 1200 1200">
+                    <defs>
+                        <linearGradient id="glass-gradient" x2="0.45" y2="1">
+                            <stop class="stop-1" offset="0%" />
+                            <stop class="stop-2" offset="100%" />
+                        </linearGradient>
+                        <pattern id="pattern-circles" x="0" y="0" width="90" height="90" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+                            <circle id="pattern-circle" cx="10" cy="10" r="5" fill="#000"></circle>
+                        </pattern>
+                    </defs>
+
+                    <circle class="bg-circle" cx="600" cy="600" r="600" />
+                    <circle class="bg-circle-glass" cx="600" cy="600" r="600" />
+
+                    <circle class="dot-grid" cx="600" cy="600" r="600" fill="url(#pattern-circles)" />
+
+                    <image class="image" href="./img/me_cutout_duotone.png" />
+                </svg>
             </div>
         </div>
     </section>

@@ -7,9 +7,10 @@ section#hero {
         display: flex;
         height: 100%;
 
+        justify-content: space-between;
         align-items: center;
 
-        .main {
+        .left {
             display: flex;
             flex-direction: column;
 
@@ -18,8 +19,50 @@ section#hero {
                 color: variables.$text-title;
             }
             p {
+                margin-top: 1rem;
                 font-size: 1.5rem;
                 color: variables.$text-subtitle;
+            }
+        }
+
+        .right {
+            img {
+                width: 25rem;
+                rotate: 10deg;
+            }
+
+            svg {
+                width: 30rem;
+                border: 1px solid variables.$stroke;
+                border-radius: 50%;
+
+                #glass-gradient {
+                    .stop-1 {
+                        stop-color: variables.$glass-stop-one;
+                    }
+                    .stop-2 {
+                        stop-color: variables.$glass-stop-two;
+                    }
+                }
+
+                .bg-circle-glass {
+                    fill: url(#glass-gradient);
+                }
+                .bg-circle {
+                    fill: variables.$overlay-two;
+                }
+
+                .dot-grid {
+                    transform: rotate(-20deg);
+                    filter: blur(5px);
+                    transform-origin: 50%;
+                    opacity: 30%;
+                }
+
+                .image {
+                    transform: rotate(10deg);
+                    transform-origin: 50%;
+                }
             }
         }
     }
