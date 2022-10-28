@@ -1,22 +1,30 @@
 @use '../util/variables';
 
 .button {
-    display: inline-block;
     text-decoration: none;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    padding: 1rem 3rem;
+    > iconify-icon {
+        font-size: 1.25rem;
+    }
+    &.big {
+        padding: 1.25rem 4rem;
+        font-size: 1.25rem;
+
+        > iconify-icon {
+            font-size: 1.5rem;
+        }
+    }
 
     // either filled, glass or text
     // can add primary (default is standard dark blue grey)
 
     &.filled {
-        padding: 1rem 3rem;
-        font-weight: 600;
-        &.big {
-            padding: 1.25rem 4rem;
-            font-size: 1.25rem;
-        }
-
         border-radius: variables.$border-radius;
-        background-color: variables.$background;
+        background-color: variables.$item-background;
         color: variables.$text-body;
 
         &.primary {
@@ -26,10 +34,11 @@
     }
 
     &.glass {
-
     }
 
     &.text {
-
+        color: variables.$primary;
+        border: 1px solid variables.$stroke;
+        border-radius: variables.$border-radius;
     }
 }
