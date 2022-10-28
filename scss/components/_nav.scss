@@ -5,13 +5,30 @@ nav {
     position: fixed;
     width: 100vw;
     height: variables.$nav-height;
-
-    border-bottom: 1px solid variables.$stroke;
-    background: variables.$glass-gradient, variables.$container-background-one;
-
     z-index: 100;
 
     @include mixins.background-blur;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0;
+        
+        border-bottom: 1px solid variables.$stroke;
+        background: variables.$glass-gradient, variables.$container-background-one;
+
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:not(.docked) {
+        &::before {
+            opacity: 1;
+        }
+    }
     
     .content {
         display: flex;
