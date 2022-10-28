@@ -1,0 +1,6 @@
+@use 'util/typography';
+@use 'util/variables';
+
+body {
+    background-color: variables.$background;
+}
