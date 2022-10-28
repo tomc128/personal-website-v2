@@ -6,9 +6,14 @@
     gap: 0.5rem;
     align-items: center;
 
+    transition-property: transform, box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
     padding: 1rem 3rem;
     > iconify-icon {
         font-size: 1.25rem;
+        transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     &.big {
         padding: 1.25rem 4rem;
@@ -19,9 +24,6 @@
         }
     }
 
-    // either filled, glass or text
-    // can add primary (default is standard dark blue grey)
-
     &.filled {
         border-radius: variables.$border-radius;
         background-color: variables.$item-background;
@@ -30,6 +32,11 @@
         &.primary {
             background-color: variables.$primary;
             color: variables.$text-on-primary;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         }
     }
 
