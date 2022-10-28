@@ -1,6 +1,8 @@
 @use 'util/typography';
 @use 'util/variables';
+
 @use 'components/nav';
+@use 'components/buttons';
 
 @use 'sections/hero';
 
@@ -12,6 +14,8 @@
 
 body {
     background-color: variables.$background;
+
+    min-height: 200vh;
 }
 
 section > .content, nav > .content, footer > .content {

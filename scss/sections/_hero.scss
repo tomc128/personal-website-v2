@@ -23,6 +23,10 @@ section#hero {
                 font-size: 1.5rem;
                 color: variables.$text-subtitle;
             }
+
+            .actions {
+                margin-top: 3rem;
+            }
         }
 
         .right {
@@ -68,10 +72,10 @@ section#hero {
 
                 &:hover {
                     .dot-grid {
-                        transform: rotate(10deg) scale(1.25);
+                        transform: rotate(10deg) scale(1.2);
                     }
                     image {
-                        transform: scale(1.05);
+                        transform: rotate(3deg) scale(1.05);
                     }
                 }
             }

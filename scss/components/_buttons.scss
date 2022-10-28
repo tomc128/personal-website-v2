@@ -1,3 +1,35 @@
+@use '../util/variables';
+
 .button {
-    
+    display: inline-block;
+    text-decoration: none;
+
+    // either filled, glass or text
+    // can add primary (default is standard dark blue grey)
+
+    &.filled {
+        padding: 1rem 3rem;
+        font-weight: 600;
+        &.big {
+            padding: 1.25rem 4rem;
+            font-size: 1.25rem;
+        }
+
+        border-radius: variables.$border-radius;
+        background-color: variables.$background;
+        color: variables.$text-body;
+
+        &.primary {
+            background-color: variables.$primary;
+            color: variables.$text-on-primary;
+        }
+    }
+
+    &.glass {
+
+    }
+
+    &.text {
+
+    }
 }
