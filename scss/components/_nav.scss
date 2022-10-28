@@ -1,14 +1,35 @@
 @use '../util/variables';
+@use '../util/mixins';
 
 nav {
+    position: fixed;
+    width: 100vw;
     height: variables.$nav-height;
-    display: flex;
-    justify-content: space-between;
 
     border-bottom: 1px solid variables.$stroke;
-    background: variables.$overlay-gradient;
+    background: variables.$glass-gradient, variables.$overlay-one;
 
-    h2 {
-        color: variables.$text-title;
+    @include mixins.background-blur;
+    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 4rem;
+
+        h2 {
+            color: variables.$text-title;
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+
+            a {
+                color: variables.$text-subtitle;
+                text-decoration: none;
+            }
+        }
     }
 }

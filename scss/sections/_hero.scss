@@ -1,0 +1,26 @@
+@use '../util/variables';
+
+section#hero {
+    height: 100vh;
+
+    .content {
+        display: flex;
+        height: 100%;
+
+        align-items: center;
+
+        .main {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 5rem;
+                color: variables.$text-title;
+            }
+            p {
+                font-size: 1.5rem;
+                color: variables.$text-subtitle;
+            }
+        }
+    }
+}

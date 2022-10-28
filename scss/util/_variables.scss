@@ -1,11 +1,16 @@
 $background: #212126;
-$background-alt: #4A4B69;
+
+$background-temp-light: #4A4B69;
+$background-temp-dark: #202031;
 
 $text-title: #FFD0D0;
-$text-subtitle: #B89696;
+$text-subtitle: #948181;
 $text-body: #C7B4B4;
 
-$overlay-gradient: linear-gradient(165deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-$stroke: rgba(255,255,255,0.1);
+$glass-gradient: linear-gradient(165deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+$overlay-one: rgba(28, 28, 36, 0.75);
+$overlay-two: rgba(32, 32, 49, 0.75);
+
+$stroke: rgba(255,255,255,0.3);
 
 $nav-height: 7.5rem;

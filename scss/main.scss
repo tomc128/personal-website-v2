@@ -2,6 +2,8 @@
 @use 'util/variables';
 @use 'components/nav';
 
+@use 'sections/hero';
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,4 +12,9 @@
 
 body {
     background-color: variables.$background;
+}
+
+section > .content {
+    max-width: 1800px;
+    margin: 0 auto;
 }
