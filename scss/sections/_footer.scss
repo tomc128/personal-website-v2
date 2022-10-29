@@ -1,5 +1,7 @@
 @use '../util/variables';
 
 footer {
-    height: 100vh;
+    min-height: 50vh;
+    background-color: variables.$background-three;
+    border-top: 1px solid variables.$stroke;
 }

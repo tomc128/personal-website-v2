@@ -213,19 +213,22 @@ var tom = new Person
             <h1 data-tal>Get in touch</h1>
             <div class="layout">
                 <div class="left">
-                    <h3>Follow me,</h3>
-                    <ul>
-                        <li>
-                            <a href="mailto:tomchapman128@gmail.com" class="button text"><iconify-icon icon="fluent:mail-16-filled"></iconify-icon>tomchapman128@gmail.com</a>
-                        </li>
-                        <li>
-                            <a href="" class="button text"><iconify-icon icon="akar-icons:instagram-fill"></iconify-icon>@tomchapmandev</a>
-                        </li>
-                    </ul>
+                    <h3 data-tal="100">Follow me</h3>
+                    <div class="links" data-tal="400;children=100">
+                        <a href="mailto:tomchapman128@gmail.com" class="button text">
+                            <iconify-icon icon="fluent:mail-16-filled"></iconify-icon>tomchapman128@gmail.com
+                        </a>
+                        <a href="https://instagram.com/tomchapmandev" target="_blank" class="button text">
+                            <iconify-icon icon="akar-icons:instagram-fill"></iconify-icon>tomchapmandev
+                        </a>
+                        <a href="https://github.com/tomc128" target="_blank" class="button text">
+                            <iconify-icon icon="akar-icons:github-fill"></iconify-icon>tomc128
+                        </a>
+                    </div>
                 </div>
                 <div class="right">
-                    <h3>or send me a message</h3>
-                    <form action="">
+                    <h3 data-tal="100">or send me a message</h3>
+                    <form data-tal="400;children=100" action="">
                         <div class="input-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name">
@@ -237,6 +240,11 @@ var tom = new Person
                         <div class="input-group">
                             <label for="Message">Message</label>
                             <textarea name="message" id="message" rows="5"></textarea>
+                        </div>
+                        <div class="actions">
+                            <button type="submit" class="button filled primary">
+                                Send <iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -256,7 +264,13 @@ var tom = new Person
     </section> -->
 
 
-    <footer></footer>
+    <footer>
+        <div class="content" data-tal="100;children=200">
+            <h1>Tom Chapman</h1>
+            <p>Copyright &copy; Tom Chapman 2022</p>
+            <p>Baked with HTML, seasoned with SCSS with a pinch of JS.</p>
+        </div>
+    </footer>
 </body>
 
 <script src="./js/index.js"></script>
