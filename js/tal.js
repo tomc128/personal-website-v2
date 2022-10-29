@@ -27,7 +27,6 @@ function initElements(_) {
     allTalElements.forEach((element) => {
         const args = element.dataset.tal.split(';');
         if (args.length == 2) {
-            console.log(element);
             const children = element.children;
 
             for (let i = 0; i < children.length; i++) {
@@ -44,8 +43,6 @@ function updateElements(_) {
         if (isElementInView(element)) {
             const args = element.dataset.tal.split(';');
             const mainDelay = args[0] || 0;
-
-            console.log(args);
 
             if (args.length == 1) {
                 setTimeout(() => {

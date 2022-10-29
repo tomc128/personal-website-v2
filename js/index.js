@@ -81,3 +81,25 @@ projectCards.forEach((projectCard) => {
         currentProjectCardImage.style.transform = '';
     });
 });
+
+
+// nav bar link selection
+
+const navLinks = document.querySelectorAll('#nav>.content>.links>a');
+
+window.addEventListener('scroll', () => {
+
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const activationPoint = windowHeight * 0.5;
+
+    navLinks.forEach((link) => {
+        const section = document.querySelector(link.hash);
+
+        if (section.offsetTop - activationPoint <= scrollPosition && (section.offsetTop + section.offsetHeight - activationPoint) > scrollPosition) {
+            link.classList.add('selected');
+        } else {
+            link.classList.remove('selected');
+        }
+    });
+});
