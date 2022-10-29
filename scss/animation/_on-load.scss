@@ -1,0 +1,15 @@
+[data-load] {
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1s ease-in-out;
+
+    &.loaded {
+        opacity: initial;
+        transform: translateY(0px);
+        transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1s ease-in-out;
+    }
+}
+
+span[data-load] {
+    display: inline-block;
+}

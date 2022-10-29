@@ -8,6 +8,8 @@
 @use 'components/chip';
 @use 'components/card';
 
+@use 'animation/on-load';
+
 @use 'sections/hero';
 @use 'sections/projects';
 @use 'sections/about';
