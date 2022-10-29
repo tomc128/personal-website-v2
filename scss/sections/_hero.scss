@@ -42,6 +42,8 @@ section#hero {
                 border: 1px solid variables.$stroke;
                 border-radius: 50%;
 
+                transition: box-shadow 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
                 #glass-gradient {
                     .stop-1 {
                         stop-color: variables.$glass-stop-one;
@@ -88,6 +90,8 @@ section#hero {
                     image {
                         transform: rotate(13deg) scale(1.05);
                     }
+                    
+                    box-shadow: variables.$smooth-box-shadow;
                 }
             }
         }
