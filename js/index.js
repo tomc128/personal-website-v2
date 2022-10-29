@@ -21,3 +21,31 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// card hover effect
+let currentCardBounds;
+let currentCard;
+const cardEffectStrength = 15;
+
+function transformCard(e) {
+    const x = e.clientX - currentCardBounds.left;
+    const y = e.clientY - currentCardBounds.top;
+
+    const xRel = x / currentCardBounds.width;
+    const yRel = y / currentCardBounds.height;
+
+    currentCard.style.transform = `scale3d(1.05, 1.05, 1.05) rotateX(${(yRel - 0.5) * cardEffectStrength}deg) rotateY(${-(xRel - 0.5) * cardEffectStrength}deg)`;
+}
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+        currentCard = card;
+        currentCardBounds = card.getBoundingClientRect();
+        document.addEventListener('mousemove', transformCard);
+    });
+    card.addEventListener('mouseleave', () => {
+        document.removeEventListener('mousemove', transformCard);
+        currentCard.style.transform = '';
+    });
+});
