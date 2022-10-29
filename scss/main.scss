@@ -6,14 +6,21 @@
 @use 'components/sections';
 @use 'components/project_card';
 @use 'components/chip';
+@use 'components/card';
 
 @use 'sections/hero';
 @use 'sections/projects';
+@use 'sections/about';
+@use 'sections/footer';
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +29,9 @@ body {
     min-height: 200vh;
 }
 
-section > .content, nav > .content, footer > .content {
+section > .content,
+nav > .content,
+footer > .content {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 4rem;

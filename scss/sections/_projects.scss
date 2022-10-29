@@ -1,33 +1,43 @@
 @use '../util/variables';
 
 section#projects {
-    .layout {
-        display: flex;
-        flex-direction: column;
-        gap: 6rem;
-        margin-top: 3rem;
+    .content {
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            margin-top: 3rem;
 
-        #project_boolean-expression-parser {
-            .right {
-                img {
-                    object-position: left;
+            #project_boolean-expression-parser {
+                .right {
+                    img {
+                        object-position: left;
+                    }
+                }
+            }
+
+            #project_simpliplan {
+                .right {
+                    img {
+                        object-position: center;
+                    }
+                }
+            }
+
+            #project_tomscript {
+                .right {
+                    img {
+                        object-position: left;
+                    }
                 }
             }
         }
 
-        #project_simpliplan {
-            .right {
-                img {
-                    object-position: center;
-                }
-            }
-        }
+        > .actions {
+            margin-top: 6rem;
 
-        #project_tomscript {
-            .right {
-                img {
-                    object-position: left;
-                }
+            .button {
+                margin-top: 2rem;
             }
         }
     }

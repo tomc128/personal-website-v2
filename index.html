@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 </head>
 
 <body>
@@ -33,7 +36,9 @@
                 <h1>Hey,<br>I'm Tom</h1>
                 <p>Software developer & computer science student</p>
                 <div class="actions">
-                    <a href="#" class="button filled primary big">My Projects<iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon></a>
+                    <a href="#" class="button filled primary big">My Projects
+                        <iconify-icon icon="fluent:arrow-right-16-regular" />
+                    </a>
                     <a href="#" class="button text big">
                         <iconify-icon icon="fluent:chat-16-filled"></iconify-icon>Contact Me
                     </a>
@@ -80,9 +85,11 @@
                                 <div class="chip">Open Source</div>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nostrum non. Perspiciatis laborum corporis consequatur deleniti, autem, quam asperiores similique consectetur totam exercitationem aspernatur reiciendis!</p>
-        
+
                             <div class="actions">
-                                <a href="#" class="button filled primary">Learn More<iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon></a>
+                                <a href="#" class="button filled primary">Learn More
+                                    <iconify-icon icon="fluent:arrow-right-16-regular" />
+                                </a>
                             </div>
                         </div>
                         <div class="right">
@@ -104,14 +111,16 @@
                                 <div class="chip">Web</div>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nostrum non. Perspiciatis laborum corporis consequatur deleniti, autem, quam asperiores similique consectetur totam exercitationem aspernatur reiciendis!</p>
-        
+
                             <div class="actions">
-                                <a href="#" class="button filled primary">Learn More<iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon></a>
+                                <a href="#" class="button filled primary">Learn More
+                                    <iconify-icon icon="fluent:arrow-right-16-regular" />
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card" id="project_tomscript">
                     <div class="content">
                         <div class="left">
@@ -122,9 +131,11 @@
                                 <div class="chip">Open Source</div>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nostrum non. Perspiciatis laborum corporis consequatur deleniti, autem, quam asperiores similique consectetur totam exercitationem aspernatur reiciendis!</p>
-        
+
                             <div class="actions">
-                                <a href="#" class="button filled primary">Learn More<iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon></a>
+                                <a href="#" class="button filled primary">Learn More
+                                    <iconify-icon icon="fluent:arrow-right-16-regular" />
+                                </a>
                             </div>
                         </div>
                         <div class="right">
@@ -133,11 +144,64 @@
                     </div>
                 </div>
             </div>
-            
+
+            <div class="actions">
+                <h2>Want to see more?</h2>
+                <p>Check out all my projects.</p>
+                <a href="#" class="button filled primary">View All
+                    <iconify-icon icon="fluent:open-16-regular" />
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <section id="about"></section>
+    <section id="about">
+        <div class="content">
+            <h1>A little about me</h1>
+
+            <div class="layout">
+                <div class="card" id="about-me-card">
+                    <div class="content">
+                        <h2>Tom Chapman</h2>
+                        <div class="chips">
+                            <div class="chip">Student</div>
+                            <div class="chip">Hobbyist</div>
+                        </div>
+                        <p>
+                            For the past few years, I've been learning software development and programming. I've experimented with different languages and frameworks, and built some pretty cool games, apps and tools along the way.
+                            <br><br>
+                            I'm now studying computer science at university, hoping to expand on my current knowledge.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" id="about-me-code-card">
+                    <div class="content">
+                        <pre><code>public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Occupation { get; set; }
+    public string[] Interests { get; set; }
+
+    public void SayHi() => throw new NotImplementedException();
+}
+
+var tom = new Person
+{
+    Name = "Tom Chapman",
+    Age = 18,
+    Occupation = "Student",
+    Interests = new [] { "Programming", "Game Development", "3D Art" }
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
 
     <section id="tech"></section>
 
@@ -159,5 +223,6 @@
 </body>
 
 <script src="./js/index.js"></script>
+<script>hljs.highlightAll();</script>
 
 </html>

@@ -1,0 +1,24 @@
+@use '../util/variables';
+
+.card {
+    padding: 3rem;
+
+    background: variables.$glass-gradient, variables.$container-background-two;
+    border: 1px solid variables.$stroke;
+    border-radius: variables.$border-radius;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .chips {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
