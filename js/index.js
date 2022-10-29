@@ -81,17 +81,3 @@ projectCards.forEach((projectCard) => {
         currentProjectCardImage.style.transform = '';
     });
 });
-
-
-const onLoad = document.querySelectorAll('[data-load]');
-
-window.addEventListener('load', (event) => {
-    onLoad.forEach((element) => {
-        const delay = element.dataset.loadDelay;
-
-        setTimeout(() => {
-            element.classList.add('loaded');
-        }, delay);
-
-    });
-});

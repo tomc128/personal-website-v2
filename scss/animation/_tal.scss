@@ -1,15 +1,19 @@
-[data-load] {
+// Tom's Animation Library
+
+[data-tal] {
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-25px);
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1s ease-in-out;
 
-    &.loaded {
+    &.tal-visible {
         opacity: initial;
+        visibility: initial;
         transform: translateY(0px);
         transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1s ease-in-out;
     }
 }
 
-span[data-load] {
+span[data-tal] {
     display: inline-block;
 }
