@@ -49,3 +49,35 @@ cards.forEach((card) => {
         currentCard.style.transform = '';
     });
 });
+
+// project card hover effect
+let currentProjectCardBounds;
+let currentProjectCard;
+let currentProjectCardImage;
+const projectCardEffectStrength = 5;
+
+function transformProjectCard(e) {
+    const x = e.clientX - currentProjectCardBounds.left;
+    const y = e.clientY - currentProjectCardBounds.top;
+
+    const xRel = x / currentProjectCardBounds.width;
+    const yRel = y / currentProjectCardBounds.height;
+
+    currentProjectCardImage.style.transform = `scale3d(1.05, 1.05, 1.05) rotateX(${(yRel - 0.5) * projectCardEffectStrength}deg) rotateY(${-(xRel - 0.5) * projectCardEffectStrength}deg)`;
+}
+
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach((projectCard) => {
+    projectCard.addEventListener('mouseenter', () => {
+        currentProjectCard = projectCard;
+        currentProjectCardImage = projectCard.querySelector('.right');
+        currentProjectCardBounds = projectCard.getBoundingClientRect();
+        document.addEventListener('mousemove', transformProjectCard);
+    });
+    projectCard.addEventListener('mouseleave', () => {
+        document.removeEventListener('mousemove', transformProjectCard);
+        currentProjectCard.style.transform = '';
+        currentProjectCardImage.style.transform = '';
+    });
+});
