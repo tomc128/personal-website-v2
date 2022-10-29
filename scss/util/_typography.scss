@@ -10,7 +10,7 @@ body {
     color: variables.$text-body;
 }
 
-p {
+p, input, label, textarea {
     font-size: 1.15rem;
     line-height: 1.5;
 }
@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     font-size: 1.75rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
