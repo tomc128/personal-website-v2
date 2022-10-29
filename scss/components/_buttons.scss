@@ -51,6 +51,11 @@
 
     &.text {
         color: variables.$primary;
+
+        &:hover {
+            border: 1px solid variables.$stroke;
+            border-radius: variables.$border-radius;
+        }
     }
 }
 
