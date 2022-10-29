@@ -36,3 +36,8 @@ footer > .content {
     margin: 0 auto;
     padding: 0 4rem;
 }
+
+::selection {
+    background-color: variables.$primary;
+    color: variables.$text-on-primary;
+}
