@@ -36,8 +36,12 @@ nav {
         align-items: center;
         height: 100%;
 
-        h2 {
-            color: variables.$text-title;
+        > a {
+            text-decoration: none;
+            
+            h2 {
+                color: variables.$text-title;
+            }
         }
 
         .links {
