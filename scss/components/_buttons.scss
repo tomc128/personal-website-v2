@@ -56,7 +56,7 @@
         transition: border 1s cubic-bezier(0.075, 0.82, 0.165, 1)!important;
 
         &:hover {
-            border-bottom: 2px solid variables.$stroke;
+            border-bottom: 2px solid variables.$primary;
         }
     }
 }
