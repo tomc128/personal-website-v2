@@ -26,6 +26,7 @@ function isElementInView(element) {
 function initElements(_) {
     allTalElements.forEach((element) => {
         const args = element.dataset.tal.split(';');
+
         if (args.length == 2) {
             const children = element.children;
 
@@ -77,6 +78,7 @@ function updateElements(_) {
     });
 }
 
+initElements();
+
 window.addEventListener('scroll', updateElements);
-window.addEventListener('load', initElements);
 window.addEventListener('load', updateElements);

@@ -6,14 +6,9 @@
     gap: 0.5rem;
     align-items: center;
 
-    transition-property: transform, box-shadow;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-
     padding: 1rem 3rem;
     > iconify-icon {
         font-size: 1.25rem;
-        transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     &.big {
         padding: 1.25rem 4rem;
@@ -28,6 +23,10 @@
         border-radius: variables.$border-radius;
         background-color: variables.$item-background;
         color: variables.$text-body;
+
+        transition-property: transform, box-shadow;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 
         &.primary {
             background-color: variables.$primary;
@@ -50,11 +49,14 @@
     }
 
     &.text {
+        border: 1px solid transparent;
+        border-radius: variables.$border-radius;
         color: variables.$primary;
+
+        transition: border 1s cubic-bezier(0.075, 0.82, 0.165, 1)!important;
 
         &:hover {
             border: 1px solid variables.$stroke;
-            border-radius: variables.$border-radius;
         }
     }
 }
