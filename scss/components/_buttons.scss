@@ -49,14 +49,14 @@
     }
 
     &.text {
-        border: 1px solid transparent;
+        border-bottom: 2px solid transparent;
         border-radius: variables.$border-radius;
         color: variables.$primary;
 
         transition: border 1s cubic-bezier(0.075, 0.82, 0.165, 1)!important;
 
         &:hover {
-            border: 1px solid variables.$stroke;
+            border-bottom: 2px solid variables.$stroke;
         }
     }
 }
