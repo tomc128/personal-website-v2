@@ -24,13 +24,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     scroll-padding-top: variables.$nav-height;
 }
 
 body {
-    background-color: variables.$background;
-
+    overflow-x: hidden;
     min-height: 200vh;
+    background-color: variables.$background;
 }
 
 section > .content,

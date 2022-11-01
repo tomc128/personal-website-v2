@@ -1,3 +1,14 @@
 @mixin background-blur {
     backdrop-filter: blur(75px);
 }
+
+@mixin phone {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 900px) {
+        @content;
+    }
+}

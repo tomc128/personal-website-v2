@@ -41,12 +41,17 @@ nav {
             
             h2 {
                 color: variables.$text-title;
+                font-size: clamp(1.25rem, 3vw, 1.75rem);
             }
         }
 
         .links {
             display: flex;
             gap: 2rem;
+
+            @include mixins.phone {
+                display: none;
+            }
 
             a {
                 color: variables.$text-nav;
