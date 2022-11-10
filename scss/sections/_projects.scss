@@ -1,12 +1,17 @@
 @use '../util/variables';
+@use '../util/mixins';
 
 section#projects {
     .content {
         .layout {
             display: flex;
             flex-direction: column;
-            gap: 6rem;
             margin-top: 3rem;
+
+            gap: 6rem;
+            @include mixins.tablet {
+                gap: 9rem;
+            }
 
             perspective: 1500px;
 
@@ -37,6 +42,9 @@ section#projects {
 
         > .actions {
             margin-top: 6rem;
+            @include mixins.tablet {
+                margin-top: 9rem;
+            }
 
             .button {
                 margin-top: 2rem;

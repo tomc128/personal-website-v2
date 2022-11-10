@@ -5,6 +5,10 @@
     min-height: 30rem;
     height: 1rem; // to make height: 100% work in .actions
 
+    @include mixins.tablet {
+        min-height: 35rem;
+    }
+
     background: variables.$glass-gradient, variables.$container-background-two;
     border: 1px solid variables.$stroke;
     border-radius: variables.$border-radius;
