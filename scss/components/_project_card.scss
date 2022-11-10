@@ -11,13 +11,27 @@
 
     @include mixins.background-blur;
 
+    &:nth-child(even) {
+        > .content {
+            // only make image on left for even numbers on desktop - on tablet and smaller it will be bottom
+            flex-direction: row-reverse;
+            @include mixins.tablet {
+                flex-direction: column;
+            }
+        }
+    }
+
     > .content {
         display: flex;
         height: 100%;
-        flex-direction: row;
         gap: 3rem;
         padding: 3rem;
         align-items: flex-start;
+
+        flex-direction: row;
+        @include mixins.tablet {
+            flex-direction: column;
+        }
 
         perspective: 1500px;
 
@@ -25,18 +39,17 @@
             flex: 1 1 0px;
             display: flex;
             height: 100%;
+            gap: 1rem;
             flex-direction: column;
 
             h2 {
                 color: variables.$text-title;
                 font-size: 2rem;
-                margin-bottom: 1rem;
             }
 
             .chips {
                 display: flex;
                 gap: 1rem;
-                margin-bottom: 1rem;
             }
 
             .actions {
@@ -51,6 +64,11 @@
             border: 1px solid variables.$stroke;
             border-radius: variables.$border-radius;
             height: calc(100% + 6rem);
+
+            @include mixins.tablet {
+                width: 100%;
+                min-height: 20rem;
+            }
 
             transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
             box-shadow: variables.$smooth-box-shadow;

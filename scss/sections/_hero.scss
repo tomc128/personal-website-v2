@@ -29,12 +29,12 @@ section#hero {
             flex-direction: column;
             
             h1 {
-                font-size: clamp(3rem, 10vw, 5rem);
+                font-size: clamp(3rem, 10vw, 4rem);
                 color: variables.$text-title;
             }
             p {
                 margin-top: 1rem;
-                font-size: clamp(1rem, 3vw, 1.5rem);
+                font-size: clamp(1rem, 3vw, 1.25rem);
                 color: variables.$text-subtitle;
             }
 
@@ -50,7 +50,7 @@ section#hero {
 
         .right {
             flex: 0 1 auto;
-            width: clamp(20rem, 50vw, 35rem);
+            width: clamp(15rem, 50vw, 30rem);
 
             svg {
 
