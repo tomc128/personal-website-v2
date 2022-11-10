@@ -1,7 +1,11 @@
 @use '../util/variables';
+@use '../util/mixins';
 
 .card {
     padding: 3rem;
+    @include mixins.tablet {
+        padding: 3rem 2rem;
+    }
 
     background: variables.$glass-gradient, variables.$container-background-two;
     border: 1px solid variables.$stroke;
