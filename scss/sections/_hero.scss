@@ -53,9 +53,8 @@ section#hero {
             width: clamp(15rem, 50vw, 30rem);
 
             svg {
-
                 @include mixins.tablet {
-                    width: 100vw;
+                    width: 80vw;
                 }
 
                 border: 1px solid variables.$stroke;

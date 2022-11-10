@@ -1,5 +1,6 @@
 @use 'util/typography';
 @use 'util/variables';
+@use 'util/mixins';
 
 @use 'components/nav';
 @use 'components/buttons';
@@ -39,7 +40,15 @@ nav > .content,
 footer > .content {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 clamp(2rem, 4vw, 8rem);
+
+    @include mixins.tablet {
+        padding: 0 2rem;
+    }
+
+    @include mixins.phone {
+        padding: 0 1rem;
+    }
 }
 
 ::selection {
