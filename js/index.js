@@ -132,3 +132,7 @@ function updateNavSectionIndicator(_) {
 
 window.addEventListener('scroll', updateNavSectionIndicator);
 window.addEventListener('load', updateNavSectionIndicator);
+
+
+const contactFormGoto = document.querySelector('#contact-form-goto');
+contactFormGoto.setAttribute('value', window.location.href);

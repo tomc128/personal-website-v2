@@ -19,7 +19,9 @@
     <nav id="nav" class="docked">
         <div class="content">
             <div class="left" data-tal="2500;children=100">
-                <a href="#"><h2>Tom Chapman</h2></a>
+                <a href="#">
+                    <h2>Tom Chapman</h2>
+                </a>
                 <span id="nav-section-indicator">temp</span>
             </div>
 
@@ -230,7 +232,7 @@ var tom = new Person
                 </div>
                 <div class="right">
                     <h3 data-tal="100">or send me a message</h3>
-                    <form data-tal="400;children=100" action="">
+                    <form data-tal="400;children=100" action="https://formsubmit.io/send/a350aa13-f4e4-4161-af0c-1ebb57c88572" method="post">
                         <div class="input-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name">
@@ -248,6 +250,9 @@ var tom = new Person
                                 Send <iconify-icon icon="fluent:arrow-right-16-regular"></iconify-icon>
                             </button>
                         </div>
+
+                        <input name="_formsubmit_id" type="hidden">
+                        <input name="_redirect" type="hidden" id="contact-form-goto" value="POPULATED_WITH_JS">
                     </form>
                 </div>
             </div>
