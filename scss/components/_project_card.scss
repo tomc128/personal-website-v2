@@ -30,7 +30,7 @@
         height: 100%;
         gap: 3rem;
         align-items: flex-start;
-        
+
         padding: 3rem;
         @include mixins.tablet {
             padding: 3rem 2rem;
@@ -57,6 +57,7 @@
 
             .chips {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 1rem;
             }
 

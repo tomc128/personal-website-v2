@@ -4,7 +4,7 @@
 nav {
     position: fixed;
     width: 100vw;
-    height: variables.$nav-height;
+    height: var(--nav-height);
     z-index: 100;
 
     @include mixins.background-blur;

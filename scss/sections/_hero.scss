@@ -4,7 +4,7 @@
 section#hero {
     min-height: 100vh;
     height: 1px; // allows .content height 100% to work
-    padding-top: variables.$nav-height;
+    padding-top: var(--nav-height);
 
     .content {
         display: flex;
@@ -14,14 +14,14 @@ section#hero {
 
         gap: 3rem;
         // dont override the default padding on .content (for sides)
-        padding-top: variables.$nav-height;
-        padding-bottom: variables.$nav-height;
+        // padding-top: var(--nav-height);
+        // padding-bottom: var(--nav-height);
 
         align-items: center;
         justify-content: space-between;
 
         @include mixins.tablet {
-            flex-direction: column;
+            // align-items: flex-start;
             gap: 5rem;
         }
 
@@ -36,15 +36,12 @@ section#hero {
             }
             p {
                 margin-top: 1rem;
-                font-size: clamp(1rem, 3vw, 1.25rem);
                 color: variables.$text-subtitle;
             }
 
             .actions {
                 display: flex;
-                @include mixins.phone {
-                    flex-direction: column;
-                }
+                flex-wrap: wrap;
                 gap: 1rem;
                 margin-top: 3rem;
             }
@@ -56,9 +53,9 @@ section#hero {
             width: clamp(15rem, 50vw, 30rem);
             @include mixins.tablet {
                 position: absolute;
-                top: clamp(0px, 5vh, 1rem);
+                top: clamp(5rem, 20vw, 10rem);
                 right: clamp(0px, 5vw, 5rem);
-                width: clamp(10rem, 40vw, 15rem);
+                width: clamp(10rem, 35vw, 25rem);
             }
 
             svg {
