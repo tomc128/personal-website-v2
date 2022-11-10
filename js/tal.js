@@ -1,9 +1,13 @@
 // Tom's Animation Library
 
-
 // data-tal : animate this element when shown, no delay
 // data-tal="1000" : animate this element when shown, with a 1 second delay
 // data-tal="1000;children=100" : animate this element's children after 1s, with a 100ms delay between each child
+
+
+// Disabling TAL will show all elements immediately - will still animate in but all at once
+const ENABLE_TAL = true;
+
 
 const verticalDeadzone = 0.15;
 
@@ -23,15 +27,23 @@ function isElementInView(element) {
     );
 }
 
-function initElements(_) {
+function initElements(forceEnable=false) {
     allTalElements.forEach((element) => {
         const args = element.dataset.tal.split(';');
+        
+        if (forceEnable) {
+            element.classList.add('tal-visible');
+        }
 
         if (args.length == 2) {
             const children = element.children;
 
             for (let i = 0; i < children.length; i++) {
                 children[i].dataset.tal = '';
+        
+                if (forceEnable) {
+                    children[i].classList.add('tal-visible');
+                }
             }
         }
     });
@@ -78,7 +90,12 @@ function updateElements(_) {
     });
 }
 
-initElements();
+if (ENABLE_TAL) {
+    initElements();
 
-window.addEventListener('scroll', updateElements);
-window.addEventListener('load', updateElements);
+    window.addEventListener('scroll', updateElements);
+    window.addEventListener('load', updateElements);
+}
+else {
+    initElements(true);
+}
