@@ -84,11 +84,9 @@ projectCards.forEach((projectCard) => {
 
 
 // nav bar link selection
-
 const navLinks = document.querySelectorAll('#nav>.content>.links>a');
 
-window.addEventListener('scroll', () => {
-
+function updateNavLinks(_) {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
     const activationPoint = windowHeight * 0.5;
@@ -102,4 +100,35 @@ window.addEventListener('scroll', () => {
             link.classList.remove('selected');
         }
     });
-});
+}
+
+window.addEventListener('scroll', updateNavLinks);
+
+
+// nav bar section indicator
+const sections = document.querySelectorAll('section');
+const navSectionIndicator = document.querySelector('#nav-section-indicator');
+
+function updateNavSectionIndicator(_) {
+    const scrollPosition = window.scrollY;
+    const activationPoint = 50; // roughly the height of the nav bar
+
+    sections.forEach((section) => {
+        const h1 = section.querySelector('.content h1');
+
+        if (section.id == 'hero') {
+            navSectionIndicator.style.visibility = 'hidden';
+            navSectionIndicator.style.display = 'none';
+        }
+        else {
+            if (h1.offsetTop - activationPoint <= scrollPosition) {
+                navSectionIndicator.style.visibility = 'visible';
+                navSectionIndicator.style.display = 'inline';
+                navSectionIndicator.innerText = h1.innerText.replace(/(\r\n|\n|\r)/gm, " ");
+            }
+        }
+    });
+}
+
+window.addEventListener('scroll', updateNavSectionIndicator);
+window.addEventListener('load', updateNavSectionIndicator);

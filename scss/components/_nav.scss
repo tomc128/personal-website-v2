@@ -36,12 +36,14 @@ nav {
         align-items: center;
         height: 100%;
 
-        > a {
-            text-decoration: none;
-            
-            h2 {
-                color: variables.$text-title;
-                font-size: clamp(1.25rem, 3vw, 1.75rem);
+        .left {
+            a {
+                text-decoration: none;
+
+                h2 {
+                    color: variables.$text-title;
+                    font-size: clamp(1.25rem, 3vw, 1.75rem);
+                }
             }
         }
 

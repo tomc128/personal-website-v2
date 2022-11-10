@@ -18,7 +18,10 @@
 <body>
     <nav id="nav" class="docked">
         <div class="content">
-            <a href="#"><h2 data-tal="2500">Tom Chapman</h2></a>
+            <div class="left" data-tal="2500;children=100">
+                <a href="#"><h2>Tom Chapman</h2></a>
+                <span id="nav-section-indicator">temp</span>
+            </div>
 
             <div data-tal="2700;children=100" class="links">
                 <a href="#projects">Projects</a>
@@ -250,18 +253,6 @@ var tom = new Person
             </div>
         </div>
     </section>
-
-    <!-- <section id="temp">
-        <a href="#" class="button filled primary big">Filled Primary Big</a>
-        <a href="#" class="button filled primary">Filled Primary</a>
-        <a href="#" class="button filled big">Filled Big</a>
-        <a href="#" class="button filled">Filled</a>
-        <a href="#" class="button outlined big">Outlined Big</a>
-        <a href="#" class="button outlined">Outlined</a>
-        <a href="#" class="button text big">Text Big</a>
-        <a href="#" class="button text">Text</a>
-    </section> -->
-
 
     <footer>
         <div class="content" data-tal="100;children=200">
