@@ -50,10 +50,6 @@ section#hero {
         .right {
             flex: 0 1 auto;
 
-            transition-property: width, height, opacity, transform; // opacity and trasnform for TAL
-            transition-duration: 1s;
-            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-
             width: clamp(15rem, 50vw, 30rem);
             @include mixins.tablet {
                 position: absolute;
