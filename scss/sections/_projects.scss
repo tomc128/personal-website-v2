@@ -15,6 +15,14 @@ section#projects {
 
             perspective: 1500px;
 
+            #project_noterly {
+                .right {
+                    img {
+                        object-position: top;
+                    }
+                }
+            }
+
             #project_boolean-expression-parser {
                 .right {
                     img {
